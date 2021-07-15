@@ -17,4 +17,5 @@
 *.xdv
 *.out
 *-blx.bib
+*.ini
 articles/
