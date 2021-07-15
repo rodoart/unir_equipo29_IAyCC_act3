@@ -60,7 +60,7 @@ En cuanto al formato textual, propiamente dicho, el tamaño de letra mínimo que
 ### Instalación
 
 * Copiar las imágenes a la carpeta `tex/figures`.
-* Si se quiere añadir una imagen adicional, solicitar a acceso mediante google drive al folder figures.
+* Si se quiere añadir una imagen adicional, solicitar a acceso mediante Google Drive al folder figures o bien escribir el link dentro del archivo `figures/links.txt`
 
 ## Autores
 
