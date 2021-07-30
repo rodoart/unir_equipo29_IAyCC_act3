@@ -312,10 +312,10 @@
   \thispagestyle{noheader}
   \noindent
   \begin{center}
-  	\vspace*{-50pt}
-     \includegraphics[width=0.6\textwidth]{logo.png}\\ 
-     \rule{\textwidth}{7pt}\\ 
-     \hspace{3pt} Nombre: \textbf{\atauthor} \hfill Actividad: \textbf{\atassignment} \hspace*{3pt} \\
+  	 \vspace*{-48pt}
+     \includegraphics[height=0.058\paperheight]{logo.png}\\ 
+     \rule{\textwidth}{4pt}\\ 
+     \hspace{3pt} Nombres: \textbf{\atauthor} \hfill Actividad: \textbf{\atassignment} \hspace*{3pt} \\
      [5pt]
     \hspace{3pt} Asignatura: \textbf{\atcourse} \hfill Fecha: \textbf{\atdate} \hspace*{3pt}\\ 
      \rule{\textwidth}{2pt}\vspace{7pt} \\
