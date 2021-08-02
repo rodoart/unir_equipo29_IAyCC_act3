@@ -129,20 +129,28 @@
 %------------------------------------------------------------------------------%
 % Use the bibtex backend with the authoryear citation style (which resembles APA)
 \RequirePackage[%
-  backend=bibtex,
-  style=authoryear,
-  maxbibnames=9,
-  maxcitenames=2,
-  natbib=true]{biblatex}%
-
+  backend=biber,
+  style=apa]{biblatex}%
 \addbibresource{biblography.bib}
 
-% Options
-\DefineBibliographyStrings{spanish}{%
-  andothers = {et al.},
-}
-\DeclareNameAlias{author}{last-first}
-\renewcommand*{\multinamedelim}{\addsemicolon\addspace}
+\DeclareDelimFormat*{finalnamedelim}
+  {\ifnum\value{liststop}>2 \finalandcomma\fi\addspace{y}\space}
+
+% the bibliography also needs another conditional, so we can't wrap
+% everything up with just the two lines above
+\DeclareDelimFormat[bib,biblist]{finalnamedelim}{%
+  \ifthenelse{\value{listcount}>\maxprtauth}
+    {}
+    {\ifthenelse{\value{liststop}>2}
+       {\finalandcomma\addspace\bibstring{and}\space}
+       {\addspace{y}\space}}}
+
+% this is a special delimiter to solve the bugs reported in
+% https://tex.stackexchange.com/q/417648/35864
+\DeclareDelimFormat*{finalnamedelim:apa:family-given}{%
+  \ifthenelse{\value{listcount}>\maxprtauth}
+    {}
+    {\finalandcomma\addspace{y}\space}}
 
 
 %------------------------------------------------------------------------------%
@@ -287,6 +295,9 @@
 \addto\captionsspanish{
 \def\listtablename{\'Indice de tablas}%
 \def\tablename{Tabla}}
+
+\newlength\tablelength
+\setlength\tablelength{0.4\textwidth}
 
 %------------------------------------------------------------------------------%
 %                             HEADERS AND FOOTERS                              %
