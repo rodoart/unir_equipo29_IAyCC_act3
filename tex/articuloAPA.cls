@@ -284,7 +284,7 @@
 \captionsetup{justification=centerlast, font=small ,labelfont=bf, margin=50pt}
 
 % New command for a rule to be used under captions.
-\newcommand{\decoRule}{\rule{.8\textwidth}{.4pt}} 
+\newcommand{\decoRule}{\rule{\linewidth}{.4pt}} 
 
 %------------------------------------------------------------------------------%
 %                                  TABLES                                      %

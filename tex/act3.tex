@@ -39,47 +39,21 @@
 %------------------------------------------------------------------------------%
 El algoritmo genético o GA por sus siglas en ingles (\textit{Genetic Algorithm}) es un paradigma de aprendizaje automático que genera los patrones de comportamiento a partir de la representación de los mecanismos de evolución. Este algoritmo se define como una metaheurística motivada por el proceso de evolución y pertenece a la gran clase de algoritmos evolutivos en informática y matemáticas computacionales.
 
-Algunos de los sectores en donde está creciendo los algoritmos genéticos son: \textit{Machine Learning}, procesamiento de imágenes, generación de rutas, optimización de problemas, optimizaciones multimodal, economía, redes neuronales, paralelización, calendarización de aplicaciones, formación robótica, arquitectura de aeronaves y bioinformática.
+Los algoritmos genéticos utilizan algoritmos bioinspirados como lo es la selección, mutación y la convergencia, estos algoritmos se han basado en la teoría evolutiva de Darwin, estos procesos son muy parecidos al que realiza el ser humano en la selección natural o incluso en el desarrollo de nuevas enfermedades o habilidades. En ambos casos se busca tener a los individuos más aptos, uno para sobrevivir y el otro para resolver un problema específico. Sin embargo, la selección natural y los algoritmos genéticos se distinguen por la complejidad que ambos alcanzan, los algoritmos genéticos son realmente una representación muy simple de todas las variables involucradas en el proceso evolutivo, como refieren \textcite{gestal_2010}: 
 
-En el uso de algoritmos genéticos lo primero que debe hacerse es definir correctamente el problema a resolver, una vez definido puede abstraerse en los siguientes conceptos:
+\begin{displayquote}
+  \textit{
+    ``Pero la adaptación de un individuo al medio no sólo está determinada por su composición genética. Influyen otros factores como el aprendizaje, en ocasiones adquirido por el método de prueba y error, en ocasiones adquirido por imitación del comportamiento de los padres, la cultura, la religión, etc. aspectos no contemplados en el Algoritmo Genético clásico, pero sí en otras variantes''.
+  }
+\end{displayquote}
 
-\begin{itemize}
-  \item \textbf{Cromosoma}: contiene una posible solución, sus valores pueden ser binarios, decimales, reales, cadena de caracteres.
-  \item \textbf{Alelo}: es una unidad del valor del cromosoma, en el caso del código binario sería un ``1'' o un ``0''.
-  \item \textbf{Gen}: Es un conjunto de alelos que se separa para poder hacer las operaciones de reproducción y mutación.
-  \item \textbf{Población}: Es un conjunto de cromosomas.
-  \item \textbf{Función de aptitud}: La función de aptitud que es una función que determina la validez de las soluciones propuestas.
-\end{itemize} 
-
-%------------------------------------------------------------------------------%
-\indexed{section}{Algoritmo genético}
-%------------------------------------------------------------------------------%
-
-Una vez abstraído los conceptos podemos generar el algoritmo con los siguientes pasos:
-
-\begin{enumerate}
-  \item Considere una población de P individuos al azar.
-  \item La población inicial se evalúa con la función de aptitud, de esta manera podemos conservar a los candidatos con mejor punteo.
-  \item 	Una vez seleccionados los candidatos procedemos a cruzarlos para obtener nuevos miembros de la población que ocupen los lugares de aquellos menos aptos.
-  \item Podemos adicionar una mutación aleatoria en cada iteración para evitar que el algoritmo se cicle.
-  \item Repetimos los pasos del 2 al 4 hasta que obtengamos un individuo con la aptitud deseada o lleguemos al número límite de iteraciones.
-\end{enumerate}
-
-Cada paso se puede ver en la \figura{fig:diagrama}.
-
-\begin{figure*}
-  \centering
-  \includegraphics[width=0.8\textwidth]{figures/diagrama}
-  \decoRule
-  \caption[Diagrama del sistema evolutivo. ]{Diagrama del sistema evolutivo.}
-  \label{fig:diagrama}
-\end{figure*}
+Adicionalmente, mostramos algunas de las características de los algoritmos genéticos comparadas con el proceso de selección natural biológico en \tabla{tab:selecvsga}.
 
 \begin{table}
 	\scriptsize
 	\centering
 	\begin{threeparttable}
-		\caption{Comparación entre las características de la selección natural y los algoritmos genéticos.}
+		\caption{Comparación entre las características de la selección natural y los algoritmos genéticos.\vspace*{-5pt}}
 		\label{tab:selecvsga}
 		\begin{tabular}{p{0.2\tablelength}|p{0.4\tablelength}p{0.4\tablelength}}
 			\hline
@@ -106,10 +80,49 @@ Cada paso se puede ver en la \figura{fig:diagrama}.
 		\end{threeparttable}
 	\end{table}	
 
+
+Algunos de los sectores en donde está creciendo los algoritmos genéticos son: \textit{Machine Learning}, procesamiento de imágenes, generación de rutas, optimización de problemas, optimizaciones multimodal, economía, redes neuronales, paralelización, calendarización de aplicaciones, formación robótica, arquitectura de aeronaves y bioinformática.
+
+En el uso de algoritmos genéticos lo primero que debe hacerse es definir correctamente el problema a resolver, una vez definido puede abstraerse en los siguientes conceptos:
+
+
+
+\begin{itemize}
+  \item \textbf{Cromosoma}: contiene una posible solución, sus valores pueden ser binarios, decimales, reales, cadena de caracteres.
+  \item \textbf{Alelo}: es una unidad del valor del cromosoma, en el caso del código binario sería un ``1'' o un ``0''.
+  \item \textbf{Gen}: Es un conjunto de alelos que se separa para poder hacer las operaciones de reproducción y mutación.
+  \item \textbf{Población}: Es un conjunto de cromosomas.
+  \item \textbf{Función de aptitud}: La función de aptitud que es una función que determina la validez de las soluciones propuestas.
+\end{itemize} 
+
 %------------------------------------------------------------------------------%
-\twocolumn[\begin{@twocolumnfalse}
+\indexed{section}{Algoritmo genético}
+%------------------------------------------------------------------------------%
+
+Una vez abstraído los conceptos podemos generar el algoritmo con los siguientes pasos:
+
+\begin{enumerate}
+  \item Considere una población de P individuos al azar.
+  \item La población inicial se evalúa con la función de aptitud, de esta manera podemos conservar a los candidatos con mejor punteo.
+  \item 	Una vez seleccionados los candidatos procedemos a cruzarlos para obtener nuevos miembros de la población que ocupen los lugares de aquellos menos aptos.
+  \item Podemos adicionar una mutación aleatoria en cada iteración para evitar que el algoritmo se cicle.
+  \item Repetimos los pasos del 2 al 4 hasta que obtengamos un individuo con la aptitud deseada o lleguemos al número límite de iteraciones.
+\end{enumerate}
+
+Cada paso se puede ver en la \figura{fig:diagrama}.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=1\columnwidth]{figures/diagrama}
+  \decoRule
+  \caption[Diagrama del sistema evolutivo. ]{Diagrama del sistema evolutivo.}
+  \label{fig:diagrama}
+\end{figure}
+
+%------------------------------------------------------------------------------%
+%\twocolumn[\begin{@twocolumnfalse}
   \addcontentsline{toc}{section}{Referencias}
   \printbibliography
-\end{@twocolumnfalse}]
+%\end{@twocolumnfalse}]
 \end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
