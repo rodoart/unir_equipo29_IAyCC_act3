@@ -18,4 +18,5 @@
 *.out
 *-blx.bib
 *.ini
+*.svg
 articles/

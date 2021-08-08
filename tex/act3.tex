@@ -37,9 +37,7 @@
 %------------------------------------------------------------------------------%
 \indexed{section}{Introducción}
 %------------------------------------------------------------------------------%
-El algoritmo genético o GA por sus siglas en ingles (\textit{Genetic Algorithm}) es un paradigma de aprendizaje automático que genera los patrones de comportamiento a partir de la representación de los mecanismos de evolución. Este algoritmo se define como una metaheurística motivada por el proceso de evolución y pertenece a la gran clase de algoritmos evolutivos en informática y matemáticas computacionales.
-
-Los algoritmos genéticos utilizan algoritmos bioinspirados como lo es la selección, mutación y la convergencia, estos algoritmos se han basado en la teoría evolutiva de Darwin, estos procesos son muy parecidos al que realiza el ser humano en la selección natural o incluso en el desarrollo de nuevas enfermedades o habilidades. En ambos casos se busca tener a los individuos más aptos, uno para sobrevivir y el otro para resolver un problema específico. Sin embargo, la selección natural y los algoritmos genéticos se distinguen por la complejidad que ambos alcanzan, los algoritmos genéticos son realmente una representación muy simple de todas las variables involucradas en el proceso evolutivo, como refieren \textcite{gestal_2010}: 
+El algoritmo genético o GA por sus siglas en ingles (\textit{Genetic Algorithm}) es un paradigma de aprendizaje automático que genera los patrones de comportamiento a partir de la representación de los mecanismos de evolución. Este algoritmo se define como una metaheurística motivada por el proceso de evolución y pertenece a la gran clase de algoritmos evolutivos en informática y matemáticas computacionales. Los algoritmos genéticos utilizan algoritmos bioinspirados como lo es la selección, mutación y la convergencia, estos algoritmos se han basado en la teoría evolutiva de Darwin, estos procesos son muy parecidos al que realiza el ser humano en la selección natural o incluso en el desarrollo de nuevas enfermedades o habilidades. En ambos casos se busca tener a los individuos más aptos, uno para sobrevivir y el otro para resolver un problema específico. Sin embargo, la selección natural y los algoritmos genéticos se distinguen por la complejidad que ambos alcanzan, los algoritmos genéticos son realmente una representación muy simple de todas las variables involucradas en el proceso evolutivo, como refieren \textcite{gestal_2010}: 
 
 \begin{displayquote}
   \textit{
@@ -113,10 +111,24 @@ Cada paso se puede ver en la \figura{fig:diagrama}.
 
 \begin{figure}
   \centering
-  \includegraphics[width=1\columnwidth]{figures/diagrama}
+  \includegraphics[width=0.8\columnwidth]{figures/diagrama}
   \decoRule
   \caption[Diagrama del sistema evolutivo. ]{Diagrama del sistema evolutivo.}
   \label{fig:diagrama}
+\end{figure}
+
+%------------------------------------------------------------------------------%
+\indexed{section}{Aplicación práctica del algoritmo genético}
+%------------------------------------------------------------------------------%
+
+En la \figura{fig:aplicacion} se muestra una aplicación del algoritmo genético.  El sistema recibirá un documento con habilidades deportivas para competencias de atletismo con las que cuentan nuestros deportistas, esta población de características se guardara en una memoria volátil, que denominaremos la población que se utilizará para el proceso, posterior ingresara a la función de selección en la cual ocuparemos una memoria semántica con algoritmos de Machine Learning, la cual tendrá conexión con una memoria de largo plazo donde contendrá las características de los mejores atletas en la rama del atletismo, estos algoritmos realizaran un proceso de selección de las mejores características para un atleta y se reducirá la población, población que pasará a la fase de reproducción en donde se mezclaran características, con algoritmos de Machine Learning para asegurarnos de tener las mejores combinaciones posibles, si la nueva población cuenta con las aptitudes deseadas se mostrará el resultado del proceso, si la población no cuenta con las aptitudes deseadas, se ingresara al sistema como una nueva población para comenzar nuevamente el proceso.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=1\columnwidth]{figures/arbol.png}
+  \decoRule
+  \caption[Aplicación práctica del algoritmo genético]{Aplicación práctica del algoritmo genético.}
+  \label{fig:aplicacion}
 \end{figure}
 
 %------------------------------------------------------------------------------%
